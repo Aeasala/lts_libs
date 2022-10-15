@@ -1,0 +1,5 @@
+.subckt vishrtd T1 T2
+	.param nom=1000
+	RTD T1 T2 {if(temp<0,nom*(1+A*temp+B*temp*temp+C*(temp-100)*temp*temp*temp),nom*(1+A*temp+B*temp*temp))}
+	.params A=(3.9083E-3) B=(-5.775E-7) C=(-4.183E-12)
+.ends vishrtd

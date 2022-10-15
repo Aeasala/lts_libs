@@ -1,0 +1,12 @@
+.param zo=50
+.param nf=-160
+.subckt DIRC_NF In Out Coupled Iso COM
+B1 N002 NF V=sqrt(2)*V(In)
+R§coupSrc Coupled N002 {zo}
+B2 N001 NF V=sqrt(2)*V(In)
+R§inLoad In NF {zo}
+R§outSrc Out N001 {zo}
+B4 P001 NF V=2*(V(Out)-V(Coupled))
+V4 NF COM AC {2*10**(nf/20)} 180
+R§isoSrcOut P001 Iso {zo}
+.end

@@ -1,0 +1,21 @@
+.include opamp.sub
+.subckt SSM2142 n_out_force n_out_sense GND Vin p_out_force p_out_sense
+R1 Vin N005 30k
+R2 N003 N005 30k
+XU1 N005 0 N003 opamp Aol=100K GBW=10Meg
+R3 N001 N003 30k
+XU2 N001 N004 N002 opamp Aol=100K GBW=10Meg
+R4 N002 N001 30k
+R5 N004 Vin 30k
+R6 n_out_sense N004 30k
+R7 p_out_force N002 50
+R8 GND n_out_sense 10k
+R9 N008 N003 30k
+XU4 N006 N008 N007 opamp Aol=100K GBW=10Meg
+R10 N007 N006 30k
+R11 n_out_force N007 50
+R12 p_out_sense N008 30k
+R13 GND p_out_sense 10k
+R14 N006 Vin 30k
+.backanno
+.end

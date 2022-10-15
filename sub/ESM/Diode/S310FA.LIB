@@ -1,0 +1,19 @@
+*$
+*********** Discrete Rectifier Electrical Parameters ***********
+** Product: S310FA
+** Package: SOD-123FL
+** Schottky Barrier Rectifiers
+****************************************************************
+.subckt S310FA A K
+D1 A K S310FA
+.ends S310FA
+.MODEL S310FA D
++ IS=1.096e-08       N=1.0             RS=1.230e-1
++ ISR=1.7e-8         NR=1.5            TRS1=1.05e-6
++ TRS2=1.5e-8        CJO=2.2854e-10    M=0.47
++ VJ=0.44            BV=110            IBV=2.5e-4
++ TT=7.28e-9         XTI=-12.3         EG=1.16
+****************************************************************
+** Creation: Aug.-22-2019  Rev: 1.0
+** ON Semiconductor
+

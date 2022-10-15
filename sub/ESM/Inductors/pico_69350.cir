@@ -1,0 +1,5 @@
+.subckt P69350 1 2 3 4
+L1 2 1 250u Rser=90m
+L2 3 4 250u Rser=90m
+K1 L1 L2 0.98
+.ends

@@ -1,0 +1,5 @@
+* C:\Users\em3743\Documents\LTspiceXVII\VEQRSIM.asc
+.subckt VeRES 1 2 11 12
+A1 1 conp 2 2 2 2 1 2 VARISTOR Rclamp=0.0001 G=1
+B1 1 conp V=(((abs(V(1,2))-((abs(V(1,2))/10000) / max(abs(V(11,12)),1n)))))
+.ends VeRES

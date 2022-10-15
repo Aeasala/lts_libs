@@ -1,0 +1,5 @@
+
+.subckt PD A K
+B1 A K I=V(A, K) > 0.0 ? 1E6*V(A, K) : 0.0
+R1 A K 1000G
+.ends

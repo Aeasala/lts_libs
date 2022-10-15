@@ -1,0 +1,7 @@
+* C:\Users\em3743\Documents\Projects & Documents\WJ38-7B\Worst Case Circuit Analysis\hbridge\spice\CPH5524.asc
+.subckt CPH5524 bN bP cN cP e_com
+Q1 cN bN e_com CPH5524_NPN
+Q2 cP bP e_com CPH5524_PNP
+.model CPH5524_PNP PNP(Eg=1 Bf=560 Cjc=5.5p Cje=500p Vjc=25m Vje=0.1 Vtf=1 ITF=40 Mfg=Onsemi)
+.model CPH5524_NPN NPN(Eg=1 Bf=325 Br=1.25 Nr=10 Ikr=10 Cjc=4.8p Cje=500p Vjc=25m Vje=0.1 Vtf=1 ITF=40 Mfg=Onsemi)
+.ends

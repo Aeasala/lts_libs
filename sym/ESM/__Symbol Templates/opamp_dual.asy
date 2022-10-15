@@ -1,0 +1,61 @@
+Version 4
+SymbolType BLOCK
+LINE Normal -32 -112 64 -64
+LINE Normal -32 -16 64 -64
+LINE Normal -32 -112 -32 -16
+LINE Normal -16 -80 -24 -80
+LINE Normal -16 -48 -24 -48
+LINE Normal -20 -44 -20 -52
+LINE Normal 0 -128 0 -96
+LINE Normal 0 -16 0 -32 2
+LINE Normal 4 -100 12 -100
+LINE Normal 8 -104 8 -96
+LINE Normal 4 -28 12 -28 1
+LINE Normal -32 64 64 112
+LINE Normal -32 160 64 112
+LINE Normal -32 64 -32 160
+LINE Normal -16 96 -24 96
+LINE Normal -16 128 -24 128
+LINE Normal -20 132 -20 124
+LINE Normal 0 64 0 80 2
+LINE Normal 0 176 0 144
+LINE Normal 4 76 12 76 1
+LINE Normal 8 72 8 80 1
+LINE Normal 4 148 12 148
+LINE Normal 96 -64 64 -64
+LINE Normal 96 112 64 112
+LINE Normal -32 -80 -64 -80
+LINE Normal -32 -48 -64 -48
+LINE Normal -32 96 -64 96
+LINE Normal -32 128 -64 128
+RECTANGLE Normal 96 0 -64 -128
+RECTANGLE Normal 96 176 -64 48
+TEXT 0 -64 Left 1 A
+TEXT 0 112 Left 1 B
+WINDOW 0 29 -138 Left 2
+WINDOW 3 96 -164 Center 2
+SYMATTR Prefix X
+PIN -64 -48 NONE 8
+PINATTR PinName A+
+PINATTR SpiceOrder 1
+PIN -64 -80 NONE 8
+PINATTR PinName A-
+PINATTR SpiceOrder 2
+PIN -64 128 NONE 8
+PINATTR PinName B+
+PINATTR SpiceOrder 3
+PIN -64 96 NONE 8
+PINATTR PinName B-
+PINATTR SpiceOrder 4
+PIN 0 -128 NONE 8
+PINATTR PinName V+
+PINATTR SpiceOrder 5
+PIN 0 176 NONE 8
+PINATTR PinName V-
+PINATTR SpiceOrder 6
+PIN 96 -64 NONE 8
+PINATTR PinName Ao
+PINATTR SpiceOrder 7
+PIN 96 112 NONE 8
+PINATTR PinName Bo
+PINATTR SpiceOrder 8

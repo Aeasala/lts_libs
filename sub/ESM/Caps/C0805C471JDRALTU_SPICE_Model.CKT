@@ -1,0 +1,15 @@
+.SUBCKT C0805C471JDRALTU 1 6
+*Temp = 25°C, Bias = 0VDC, Center Frequency = 100 Hz
+*KEMET Model RLC Cerm
+R1 3 4 470.249786376953
+R2 2 5 49.7000007629395
+R3 1 6 99999997952
+L1 1 2 1.15000002576249E-11
+L2 2 3 2.18500004894873E-10
+B1 4 6 I={cap*mlcc(a,b,c,abs(V(4,6)))*ddt(V(4,6))}
+C2 5 6 2.34999990463257E-12
+.param a=390 b=0.0096 c=0.79
+.func mlcc(a,b,c,x) {(1-(c*(0.5*(cosh(0.5*a*b)**-1)*sinh(0.5*b*x)*(cosh(0.5*b*(a-x))**-1))))}
+.backanno
+.end
+.ENDS

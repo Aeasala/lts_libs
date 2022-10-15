@@ -1,0 +1,7 @@
+.param inputimped 50
+.subckt Mixer IN LO OUT
+B1 OUT 0 (V(IN)*V(LO))
+R1 0 LO {inputimped}
+R2 0 IN {inputimped}
+.tran 10m
+.ends Mixer

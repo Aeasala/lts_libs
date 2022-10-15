@@ -1,0 +1,7 @@
+.param imped 50
+.subckt Mixer IN LO OUT
+B1 N001 0 V=V(IN)*V(LO)
+R1 0 LO {imped}
+R2 0 IN {imped}
+R3 OUT N001 {imped}
+.ends Mixer

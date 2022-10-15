@@ -1,0 +1,37 @@
+.param proline=sqrt(1.2)*10**(0.2) proref=sqrt(1.2) conline=sqrt(2)*10**(-0.5) conref=sqrt(2)
+
+.subckt line_amp_def in out ref_amp
+B1 out 0 V=V(in)
+R1 in 0 10k
+V1 ref_amp 0 1
+.backanno
+.ends line_amp_def
+
+.subckt pro_ref in out ref_amp
+B1 out 0 V=V(in)*proref
+R1 in 0 10k
+V1 ref_amp 0 {proref}
+.backanno
+.ends pro_ref
+
+.subckt pro_line in out ref_amp
+B1 out 0 V=V(in)*proline
+R1 in 0 10k
+V1 ref_amp 0 {proline}
+.backanno
+.ends pro_line
+
+.subckt con_ref in out ref_amp
+B1 out 0 V=V(in)*conref
+R1 in 0 10k
+V1 ref_amp 0 {conref}
+.backanno
+.ends con_ref
+
+.subckt con_line in out ref_amp
+B1 out 0 V=V(in)*conline
+R1 in 0 10k
+V1 ref_amp 0 {conline}
+.backanno
+.ends con_line
+

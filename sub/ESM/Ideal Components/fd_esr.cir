@@ -1,0 +1,13 @@
+.param fstart=100
+.param impedstart=29.3
+.param impedstop=12.56m
+.param fstop=1Meg
+
+	.param fdec=2*log(fstop/fstart)
+	.param mdec=log(impedstart/impedstop)
+	.param ep=mdec/fdec
+
+.subckt fd_esr N001 N002
+	G1 N001 N002 N001 N002 LAPLACE=((-s*s/(4*fstart*fstart)/pi^2)^ep)/impedstart
+	R1 N001 N002 1Gig
+.end

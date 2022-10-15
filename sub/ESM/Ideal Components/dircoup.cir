@@ -1,0 +1,10 @@
+.param zo=50
+.subckt Dircoup In Out Coupled Iso
+B1 N002 0 V=sqrt(2)*V(In)
+R§coupSrc Coupled N002 {zo}
+B2 N001 0 V=sqrt(2)*V(In)
+R§isoSrc N003 Iso {zo}
+R§inLoad In 0 {zo}
+R§outSrc Out N001 {zo}
+B3 0 N003 I=I(B2)-I(B1)
+.ends Dircoup

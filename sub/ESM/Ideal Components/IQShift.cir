@@ -1,0 +1,22 @@
+.param posshift=1
+.param startuptime=10u
+
+.subckt iqshift in I Q
+B1 RFinit 0 V=ddt(V(in))
+XU1 RFinit node PD
+B2 node 0 I=ddt(v(node))
+B3 Q 0 V=-min(1,(time/startuptime))*V(RFinit)/max(V(node),1)*V(amp)*sgn(posshift-0.5)
+R1 node 0 10
+B4 I 0 V=V(in)
+V1 IF 0 SINE(0 1 5000)
+B5 IFinit 0 V=V(in)
+XU2 IFinit amp PD
+R2 amp 0 10
+B6 amp 0 I=ddt(v(amp))
+
+.ends
+
+.subckt PD A K
+B1 A K I=V(A, K) > 0.0 ? 1E6*V(A, K) : 0.0
+R1 A K 1000G
+.ends
